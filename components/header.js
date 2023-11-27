@@ -1,3 +1,9 @@
+import "../app/globals.css";
+
 export default function Header() {
-  return <header>This is the header</header>;
+  return (
+    <header>
+      <h1>My Blog</h1>
+    </header>
+  );
 }

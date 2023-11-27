@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  padding: 4px 0;
+  text-align: center;
+}

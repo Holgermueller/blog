@@ -22,15 +22,15 @@ export default function Home({ allPostsData }) {
 
       <section>
         <h2>Blog</h2>
+
         <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <div key={id} className="list-card">
+          {allPostsData.map((post) => (
+            <div key={post.id} className="list-card">
               <li>
-                <h3>{title}</h3>
+                <h3>{post.title}</h3>
+
                 <br />
-                {id}
-                <br />
-                {date}
+                {post.date}
               </li>
             </div>
           ))}

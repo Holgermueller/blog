@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div>
-      <h2>This is the contactpage</h2>
+      <h2 className="section-header">This is the contactpage</h2>
     </div>
   );
 }

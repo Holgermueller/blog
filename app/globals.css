@@ -49,6 +49,10 @@ section {
   margin: auto;
 }
 
+.section-header {
+  text-align: center;
+}
+
 nav {
   border-top: 1px black solid;
   border-bottom: 1px black solid;
@@ -82,7 +86,9 @@ nav {
 
 .recent-posts-card:hover {
   z-index: 5;
-  box-shadow: 2px 2px 2px 2px black;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
 }
 
 footer {
@@ -92,6 +98,6 @@ footer {
   width: 100%;
   padding: 4px 0;
   text-align: center;
-  background-color: black;
-  color: antiquewhite;
+  background-color: white;
+  color: black;
 }

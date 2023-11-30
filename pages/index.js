@@ -37,7 +37,9 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
 
-      <RecentPosts allPostsData={allPostsData} />
+      <section>
+        <RecentPosts allPostsData={allPostsData} />
+      </section>
 
       <Footer />
     </main>

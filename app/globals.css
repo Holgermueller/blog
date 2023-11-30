@@ -46,10 +46,14 @@ header {
 
 section {
   width: 85%;
-  margin: auto;
+  margin: 5% auto;
 }
 
 .section-header {
+  text-align: center;
+}
+
+.sub-header {
   text-align: center;
 }
 
@@ -91,10 +95,18 @@ nav {
   background-color: white;
 }
 
+.about-paragraph {
+  width: 75%;
+  margin: 16px auto 0;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
 footer {
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: relative;
   width: 100%;
   padding: 4px 0;
   text-align: center;

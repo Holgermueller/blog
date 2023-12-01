@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
+import Link from "next/link";
 
 import { getSortedPostsData } from "@/lib/posts";
 
@@ -18,9 +19,24 @@ export default function Archives({ allPostsData }) {
     <div>
       <Header />
       <Nav />
-      <h2 className="section-header">This is the Archives page</h2>
+      <h2 className="section-header">Archives</h2>
+      <p className="sub-header">Check out some of my older posts</p>
 
-      <section></section>
+      <section>
+        <ul>
+          {allPostsData.map((post) => (
+            <div key={post.id} className="list-card">
+              <li>
+                <h3>{post.title}</h3>
+
+                <br />
+                {post.date}
+              </li>
+              <Link href={`/blog/${post.slug}`}>Read More</Link>
+            </div>
+          ))}
+        </ul>
+      </section>
       <Footer />
     </div>
   );

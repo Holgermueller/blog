@@ -11,6 +11,7 @@ export default function Contact() {
       <section>
         <h3 className="sub-header">The best ways to get in touch with me</h3>
       </section>
+
       <Footer />
     </div>
   );

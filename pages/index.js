@@ -3,11 +3,12 @@ import Nav from "../components/nav";
 import RecentPosts from "@/components/recentPosts";
 import Footer from "../components/footer";
 import Date from "@/components/date";
+import Link from "next/link";
 
 import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
 
   return {
     props: {
@@ -26,14 +27,21 @@ export default function Home({ allPostsData }) {
         <h2 className="section-header">{allPostsData[0].title}</h2>
         <Date dateString={allPostsData[0].date} />
 
-        <div
-          className="post-paragraph"
-          dangerouslySetInnerHTML={{ __html: allPostsData[0].contentHtml }}
-        />
+        <p>{allPostsData[0].preview}</p>
+        <Link
+          href={{
+            pathname: "blog/[id]",
+            query: {
+              id: allPostsData[0].id,
+            },
+          }}
+        >
+          Read More
+        </Link>
       </section>
 
       <div>
-        <RecentPosts allPostsData={allPostsData} />
+        <RecentPosts allPostsData={allPostsData.slice(1)} />
       </div>
 
       <Footer />

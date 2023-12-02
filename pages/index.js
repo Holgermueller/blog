@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
       <Nav />
 
       <section>
-        <h2>{allPostsData[0].title}</h2>
+        <h2 className="section-header">{allPostsData[0].title}</h2>
         <Date dateString={allPostsData[0].date} />
 
         <div

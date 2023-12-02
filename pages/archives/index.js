@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import Link from "next/link";
+import Date from "@/components/date";
 
 import { getSortedPostsData } from "@/lib/posts";
 
@@ -28,10 +29,10 @@ export default function Archives({ allPostsData }) {
             <div key={post.id} className="list-card">
               <li>
                 <h3>{post.title}</h3>
+
                 <br />
-                {post.id}
-                <br />
-                {post.date}
+
+                <Date dateString={post.date} />
               </li>
               <Link
                 href={{

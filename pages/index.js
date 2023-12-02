@@ -3,6 +3,7 @@ import Nav from "../components/nav";
 import RecentPosts from "@/components/recentPosts";
 import Footer from "../components/footer";
 import Link from "next/link";
+import Date from "@/components/date";
 
 import { getSortedPostsData } from "../lib/posts";
 
@@ -31,7 +32,8 @@ export default function Home({ allPostsData }) {
                 <h3>{post.title}</h3>
 
                 <br />
-                {post.date}
+                <Date dateString={post.date} />
+                <br />
                 <Link
                   href={{
                     pathname: "blog/[id]",

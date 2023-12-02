@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Date from "./date";
 
 export default function RecentPosts({ allPostsData }) {
   return (
@@ -10,10 +11,9 @@ export default function RecentPosts({ allPostsData }) {
             <div key={id} className="recent-posts-card">
               <li>
                 <h3>{title}</h3>
+
                 <br />
-                {id}
-                <br />
-                {date}
+                <Date dateString={date} />
                 <br />
                 <Link
                   href={{

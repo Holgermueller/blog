@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function RecentPosts({ allPostsData }) {
   return (
     <section className="recent-posts">
@@ -12,6 +14,17 @@ export default function RecentPosts({ allPostsData }) {
                 {id}
                 <br />
                 {date}
+                <br />
+                <Link
+                  href={{
+                    pathname: "blog/[id]",
+                    query: {
+                      id: id,
+                    },
+                  }}
+                >
+                  Read More
+                </Link>
               </li>
             </div>
           ))}

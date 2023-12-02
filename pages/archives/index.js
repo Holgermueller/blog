@@ -28,11 +28,21 @@ export default function Archives({ allPostsData }) {
             <div key={post.id} className="list-card">
               <li>
                 <h3>{post.title}</h3>
-
+                <br />
+                {post.id}
                 <br />
                 {post.date}
               </li>
-              <Link href={`/blog/${post.slug}`}>Read More</Link>
+              <Link
+                href={{
+                  pathname: "blog/[id]",
+                  query: {
+                    id: post.id,
+                  },
+                }}
+              >
+                Read More
+              </Link>
             </div>
           ))}
         </ul>

@@ -2,6 +2,7 @@ import Header from "../components/header";
 import Nav from "../components/nav";
 import RecentPosts from "@/components/recentPosts";
 import Footer from "../components/footer";
+import Link from "next/link";
 
 import { getSortedPostsData } from "../lib/posts";
 
@@ -31,6 +32,16 @@ export default function Home({ allPostsData }) {
 
                 <br />
                 {post.date}
+                <Link
+                  href={{
+                    pathname: "blog/[id]",
+                    query: {
+                      id: post.id,
+                    },
+                  }}
+                >
+                  Read More
+                </Link>
               </li>
             </div>
           ))}

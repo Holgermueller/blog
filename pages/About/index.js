@@ -12,7 +12,7 @@ export default function About() {
         <small>A bio of sorts</small>
       </p>
       <section>
-        <p class="about-paragraph">
+        <p className="about-paragraph">
           Hi, I'm Holger Mueller. I'm a recent transplant to the town of
           Batesville, Arkansas. This is my first time living in a southern
           state, and I figured I'd use this blog as a way to record my

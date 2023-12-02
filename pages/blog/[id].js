@@ -13,8 +13,10 @@ export default function PostPage({ postData }) {
       <Header />
       <Nav />
       <section>
-        <img src={postData.cover_image} alt="" height="50%" width="100%" />
-        <h2 className="section-header">{postData.title}</h2>
+        <div className="container">
+          <img src={postData.cover_image} alt="" height="50%" width="100%" />
+          <h2 className="hero-header">{postData.title}</h2>
+        </div>
 
         <br />
         <div className="time">

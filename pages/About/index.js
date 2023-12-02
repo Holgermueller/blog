@@ -1,13 +1,21 @@
 import Header from "@/components/header";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
+import Image from "next/image";
+import AboutPic from "../../public/images/about.jpg";
 
 export default function About() {
   return (
     <div>
       <Header />
       <Nav />
-      <h2 className="section-header">About me</h2>
+
+      <div className="about-header">
+        {/* Image by MESSALA CIULLA */}
+        <Image src={AboutPic} alt="open-book-on-table" fill sizes="50% 100%" />
+        <h2 className="section-header">About me</h2>
+      </div>
+
       <p className="sub-header">
         <small>A bio of sorts</small>
       </p>

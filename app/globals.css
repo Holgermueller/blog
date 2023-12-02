@@ -95,6 +95,14 @@ nav {
   background-color: white;
 }
 
+.time {
+  text-align: justify;
+  line-height: 1.5;
+  width: 75%;
+  margin: 16px auto 0;
+}
+
+.post-paragraph,
 .about-paragraph {
   width: 75%;
   margin: 16px auto 0;

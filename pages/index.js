@@ -2,13 +2,13 @@ import Header from "../components/header";
 import Nav from "../components/nav";
 import RecentPosts from "@/components/recentPosts";
 import Footer from "../components/footer";
-import Link from "next/link";
 import Date from "@/components/date";
 
 import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+
   return {
     props: {
       allPostsData,
@@ -18,41 +18,23 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
       <Header />
       <Nav />
 
       <section>
-        <h2>Blog</h2>
+        <h2>{allPostsData[0].title}</h2>
+        <Date dateString={allPostsData[0].date} />
 
-        <ul>
-          {allPostsData.map((post) => (
-            <div key={post.id} className="list-card">
-              <li>
-                <h3>{post.title}</h3>
-
-                <br />
-                <Date dateString={post.date} />
-                <br />
-                <Link
-                  href={{
-                    pathname: "blog/[id]",
-                    query: {
-                      id: post.id,
-                    },
-                  }}
-                >
-                  Read More
-                </Link>
-              </li>
-            </div>
-          ))}
-        </ul>
+        <div
+          className="post-paragraph"
+          dangerouslySetInnerHTML={{ __html: allPostsData[0].contentHtml }}
+        />
       </section>
 
-      <section>
+      <div>
         <RecentPosts allPostsData={allPostsData} />
-      </section>
+      </div>
 
       <Footer />
     </main>

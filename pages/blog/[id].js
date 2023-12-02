@@ -15,11 +15,14 @@ export default function PostPage({ postData }) {
       <h2 className="section-header">{postData.title}</h2>
 
       <br />
-      {postData.id}
-      <br />
-      <Date dateString={postData.date} />
+      <div className="time">
+        <Date dateString={postData.date} />
+      </div>
 
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div
+        className="post-paragraph"
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
 
       <Footer />
     </div>

@@ -12,17 +12,20 @@ export default function PostPage({ postData }) {
       <Head>{postData.title}</Head>
       <Header />
       <Nav />
-      <h2 className="section-header">{postData.title}</h2>
+      <section>
+        <img src={postData.cover_image} alt="" height="50%" width="100%" />
+        <h2 className="section-header">{postData.title}</h2>
 
-      <br />
-      <div className="time">
-        <Date dateString={postData.date} />
-      </div>
+        <br />
+        <div className="time">
+          <Date dateString={postData.date} />
+        </div>
 
-      <div
-        className="post-paragraph"
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+        <div
+          className="post-paragraph"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
+      </section>
 
       <Footer />
     </div>

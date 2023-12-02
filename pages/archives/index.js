@@ -39,8 +39,9 @@ export default function Archives({ allPostsData }) {
                   <h3>{post.title}</h3>
                 </Link>
                 <br />
-
                 <Date dateString={post.date} />
+
+                <p>{post.preview}</p>
               </li>
             </div>
           ))}

@@ -24,13 +24,16 @@ export default function Home({ allPostsData }) {
       <Nav />
 
       <section>
-        <img
-          src={allPostsData[0].cover_image}
-          alt=""
-          height="50%"
-          width="100%"
-        />
-        <h2 className="section-header">{allPostsData[0].title}</h2>
+        <div className="container">
+          <img
+            src={allPostsData[0].cover_image}
+            alt=""
+            height="50%"
+            width="100%"
+          />
+          <h2 className="hero-header">{allPostsData[0].title}</h2>
+        </div>
+
         <Date dateString={allPostsData[0].date} />
 
         <p>{allPostsData[0].preview}</p>

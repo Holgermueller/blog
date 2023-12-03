@@ -10,16 +10,26 @@ export default function About() {
       <Header />
       <Nav />
 
-      <div className="about-header">
-        {/* Image by MESSALA CIULLA */}
-        <Image src={AboutPic} alt="open-book-on-table" fill sizes="50% 100%" />
-        <h2 className="section-header">About me</h2>
-      </div>
-
-      <p className="sub-header">
-        <small>A bio of sorts</small>
-      </p>
       <section>
+        <div className="about-header">
+          <div className="overlay">
+            {/* Image by MESSALA CIULLA */}
+            <Image
+              src={AboutPic}
+              alt="open-book-on-table"
+              placeholder="blur"
+              style={{
+                width: "100%",
+                height: "50%",
+              }}
+            />
+            <h2 className="section-header hero-header">About me</h2>
+          </div>
+        </div>
+
+        <p className="sub-header">
+          <small>A bio of sorts</small>
+        </p>
         <p className="about-paragraph">
           Hi, I'm Holger Mueller. I'm a recent transplant to the town of
           Batesville, Arkansas. This is my first time living in a southern

@@ -10,13 +10,31 @@ import { FaCoffee } from "react-icons/fa";
 import { FaEtsy } from "react-icons/fa";
 import { FaTshirt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Image from "next/image";
+import ConnectPic from "../../public/images/connect.jpg";
 
 export default function Contact() {
   return (
     <div>
       <Header />
       <Nav />
-      <h2 className="section-header">Contact</h2>
+
+      <section>
+        <div className="connect-header">
+          {/* Image by Alex Andrews via Pexels*/}
+          <Image
+            src={ConnectPic}
+            alt="phones-on-table"
+            placeholder="blur"
+            style={{
+              width: "100%",
+              height: "50%",
+            }}
+          />
+          <h2 className="section-header hero-header">Contact</h2>
+        </div>
+      </section>
+
       <section>
         <h3 className="sub-header">
           You can connect with me on these socials:

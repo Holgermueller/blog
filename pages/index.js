@@ -38,6 +38,7 @@ export default function Home({ allPostsData }) {
 
         <p>{allPostsData[0].preview}</p>
         <Link
+          className="main-post-link"
           href={{
             pathname: "blog/[id]",
             query: {

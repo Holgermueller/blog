@@ -15,6 +15,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.main-post-link {
+  padding: 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -26,7 +32,7 @@ a:hover {
   background-color: black;
 }
 
-.time {
+time {
   text-align: justify;
   line-height: 1.5;
   width: 85%;
@@ -81,7 +87,6 @@ section {
   margin: 0 auto 5%;
 }
 
-.section-header,
 .sub-header {
   text-align: center;
 }
@@ -92,10 +97,15 @@ ul {
 }
 
 .list-card {
-  border: 1px solid black;
   border-radius: 5px;
   margin: 4px auto;
   padding: 4px;
+  text-align: center;
+}
+
+.list-card:hover {
+  color: white;
+  background-color: black;
 }
 
 .recent-posts {
@@ -112,17 +122,16 @@ ul {
 }
 
 .container,
-.about-header {
+.about-header,
+.connect-header,
+.archives-header {
   position: relative;
   height: 50%;
   margin: auto;
 }
 
-.overlay {
-  background: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.5);
-
-  opacity: 1;
+img {
+  filter: brightness(50%);
 }
 
 .hero-header {
@@ -137,17 +146,33 @@ ul {
 }
 
 .recent-posts-card {
-  padding: 4px;
+  padding: 8px;
   margin: 4px;
   width: calc(100% / 3);
   border-radius: 5px;
+  text-align: center;
 }
 
 .recent-posts-card:hover {
   z-index: 5;
-  border: 1px solid black;
   border-radius: 5px;
   background-color: white;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.recent-posts-card > time {
+  margin: 4px;
+}
+
+.recent-posts-card > a {
+  margin: 4px;
+  padding: 4px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.recent-posts-card > i {
+  display: inline-block;
 }
 
 .post-paragraph,
@@ -219,6 +244,11 @@ footer {
   margin: 4px;
   padding: 4px;
   color: white;
+}
+
+.footer-socials > a:hover {
+  color: black;
+  background-color: white;
 }
 
 .copy {

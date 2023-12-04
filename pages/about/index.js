@@ -13,7 +13,7 @@ export default function About() {
       <section>
         <div className="about-header">
           <div className="overlay">
-            {/* Image by MESSALA CIULLA */}
+            {/* Image by MESSALA CIULLA via Pexels*/}
             <Image
               src={AboutPic}
               alt="open-book-on-table"

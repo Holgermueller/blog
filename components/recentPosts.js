@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Date from "./date";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function RecentPosts({ allPostsData }) {
   return (
@@ -8,25 +9,23 @@ export default function RecentPosts({ allPostsData }) {
       <ul>
         <div className="recent-posts-container">
           {allPostsData.map(({ id, date, title }) => (
-            <div key={id} className="recent-posts-card">
-              <li>
-                <h3>{title}</h3>
+            <li key={id} className="recent-posts-card">
+              <h3>{title}</h3>
 
-                <br />
-                <Date dateString={date} />
-                <br />
-                <Link
-                  href={{
-                    pathname: "blog/[id]",
-                    query: {
-                      id: id,
-                    },
-                  }}
-                >
-                  Read More
-                </Link>
-              </li>
-            </div>
+              <br />
+              <Date dateString={date} />
+              <br />
+              <Link
+                href={{
+                  pathname: "blog/[id]",
+                  query: {
+                    id: id,
+                  },
+                }}
+              >
+                Read More <FaArrowRight />
+              </Link>
+            </li>
           ))}
         </div>
       </ul>

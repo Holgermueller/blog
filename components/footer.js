@@ -6,8 +6,15 @@ import { FaCoffee } from "react-icons/fa";
 import { FaEtsy } from "react-icons/fa";
 import { FaTshirt } from "react-icons/fa";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer>
       <div className="footer-socials">
@@ -46,7 +53,8 @@ export default function Footer() {
         </Link>
       </div>
       <div className="copy">
-        Built with NextJS | Copyright &copy; 2023 Holger Mueller
+        <p>Copyright &copy; 2023 - {year} Holger Mueller</p>
+        <p>Built with NextJS</p>
       </div>
     </footer>
   );

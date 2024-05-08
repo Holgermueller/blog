@@ -12,3 +12,5 @@ the shack
 chicken plants
 owning a house
 failure
+moving
+prison

@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -93,6 +94,10 @@ section {
 
 ul {
   list-style-type: none;
+  padding: 0;
+}
+
+ul li {
   padding: 0;
 }
 
@@ -253,4 +258,26 @@ footer {
 
 .copy {
   margin: 8px auto;
+}
+
+@media screen and (max-width: 400px) {
+  .header-socials {
+    justify-content: space-between;
+  }
+
+  .recent-posts-header {
+    margin-top: 10%;
+  }
+
+  .recent-posts-container {
+    flex-direction: column;
+  }
+
+  .recent-posts-card {
+    width: 100%;
+  }
+
+  .link-container {
+    flex-direction: column;
+  }
 }
